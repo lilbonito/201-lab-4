@@ -130,14 +130,20 @@ function favoriteSnacks(){
     for(var i = 0; i < possibleAnswers.length; i++){
       if(yoshiFavoriteFood === possibleAnswers[i]){
         alert('That\'s right! I love ' + yoshiFavoriteFood + '!' + 'I also love  ' +[possibleAnswers]+ '!!!');
-        userChoseCorrectly = true;}
-      return true;
-    }if(userChoseCorrectly === false && snackQuestionsRemaining > 1){
-      alert('Nope, try again!');}
-    console.log('user guessed wrong');
-  }if(snackQuestionsRemaining === 1){
+        userChoseCorrectly = true;
+        return true;
+      }
+     
+    }
+    if(userChoseCorrectly === false && snackQuestionsRemaining > 1){
+      alert('Nope, try again!');
+    }
+      console.log('user guessed wrong');
+    }
+  if(snackQuestionsRemaining === 1){
     alert('last try');
-  }if(userChoseCorrectly === false || snackQuestionsRemaining === 0){
+  }
+  if(userChoseCorrectly === false || snackQuestionsRemaining === 0){
     alert('Sorry These ' + [possibleAnswers] + ' are my favorite foods!');
   }
   return false;
